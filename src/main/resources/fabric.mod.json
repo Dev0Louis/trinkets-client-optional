@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "id": "trinkets-client-optional",
+  "version": "${version}",
+  "name": "Trinkets Client Optional",
+  "description": "This mod is companion mod to",
+  "authors": [
+    "Louis_DS"
+  ],
+  "contact": {
+    "repo": "https://github.com/Dev0Louis/trinkets-client-optional"
+  },
+  "license": "MIT",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "dev.louis.trinketsclientoptional.client.TrinketsClientOptionalClient"
+    ],
+    "main": [
+      "dev.louis.trinketsclientoptional.TrinketsClientOptional"
+    ]
+  },
+  "mixins": [
+    "trinkets-client-optional.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
