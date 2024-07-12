@@ -13,6 +13,6 @@ public record RequestModConfirmationPayload() implements CustomPayload {
 
     @Override
     public Id<? extends CustomPayload> getId() {
-        return TrinketsNetwork.REQUEST_MOD_CONFORMATION;
+        return ID;
     }
 }
