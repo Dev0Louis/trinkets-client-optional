@@ -3,9 +3,11 @@ package dev.louis.trinketsclientoptional.mixin;
 import dev.emi.trinkets.api.TrinketsAttributeModifiersComponent;
 import dev.louis.trinketsclientoptional.TrinketsClientOptional;
 import eu.pb4.polymer.core.api.other.PolymerComponent;
+import org.spongepowered.asm.mixin.Debug;
 import org.spongepowered.asm.mixin.Mixin;
 import xyz.nucleoid.packettweaker.PacketContext;
 
+@Debug(export = true)
 @Mixin(TrinketsAttributeModifiersComponent.class)
 public class TrinketsAttributeModifiersComponentMixin implements PolymerComponent {
     @Override

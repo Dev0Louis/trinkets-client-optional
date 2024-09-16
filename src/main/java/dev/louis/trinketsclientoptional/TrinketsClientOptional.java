@@ -1,13 +1,17 @@
 package dev.louis.trinketsclientoptional;
 
+import dev.emi.trinkets.api.TrinketsAttributeModifiersComponent;
 import dev.louis.trinketsclientoptional.networking.CheckModPresentsTask;
 import dev.louis.trinketsclientoptional.networking.ModConfirmationPayload;
 import dev.louis.trinketsclientoptional.networking.RequestModConfirmationPayload;
+import eu.pb4.polymer.core.api.other.PolymerComponent;
+import eu.pb4.polymer.core.impl.other.PolymerComponentImpl;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.networking.v1.PayloadTypeRegistry;
 import net.fabricmc.fabric.api.networking.v1.ServerConfigurationConnectionEvents;
 import net.fabricmc.fabric.api.networking.v1.ServerConfigurationNetworking;
 import net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents;
+import net.minecraft.component.ComponentType;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -42,5 +46,6 @@ public class TrinketsClientOptional implements ModInitializer {
             PLAYERS_WITH_TRINKETS.remove(handler.getPlayer().getUuid());
         });
 
+        PolymerComponent.registerDataComponent(TrinketsAttributeModifiersComponent.TYPE);
     }
 }

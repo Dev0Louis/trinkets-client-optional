@@ -4,6 +4,7 @@
   "package": "dev.louis.trinketsclientoptional.mixin",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
+    "LivingEntityTrinketComponentMixin",
     "ServerPlayerEntity$1Mixin",
     "TrinketsAttributeModifiersComponentMixin"
   ],
