@@ -25,6 +25,10 @@ public class ServerPlayerEntity$1Mixin {
 
         if (TrinketsClientOptional.PLAYERS_WITH_TRINKETS.contains(this.field_29182.getUuid())) return packet;
         InventoryS2CPacket oldInvPacket = (InventoryS2CPacket) packet;
+		
+		// check if it is a player inventory
+        if (oldInvPacket.getSyncId() != this.field_29182.playerScreenHandler.syncId) return packet;
+		
         var oldContents = oldInvPacket.getContents();
 
         int transmittedSize = Math.min(46, oldContents.size());
