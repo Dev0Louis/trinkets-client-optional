@@ -46,10 +46,6 @@ public class TrinketsClientOptional implements ModInitializer {
             PLAYERS_WITH_TRINKETS.remove(handler.getPlayer().getUuid());
         });
 
-        ServerPlayConnectionEvents.JOIN.register((handler, sender, server) -> {
-            PLAYERS_WITH_TRINKETS.add(handler.getPlayer().getUuid());
-        });
-
         PolymerComponent.registerDataComponent(TrinketsAttributeModifiersComponent.TYPE);
     }
 }
